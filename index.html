@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/all.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="JS/html5shiv.js"></script>
+    <link rel="icon" href="https://i.pinimg.com/736x/ab/82/cf/ab82cfc63bd77cb794b09acac96af0e1.jpg">
+    <title>Voyage Vista</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Dancing+Script:wght@400..700&family=Liter&family=Monomakh&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mukta:wght@200;300;400;500;600;700;800&family=Noto+Sans+JP:wght@100..900&family=Noto+Sans+Newa&family=PT+Sans+Caption:wght@400;700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Parkinsans:wght@300..800&family=Playwrite+AU+SA&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="javascript:void(0)">
+                    <img src="https://i.pinimg.com/736x/ab/82/cf/ab82cfc63bd77cb794b09acac96af0e1.jpg"
+                        class="logo-img rounded-circle ms-sm-5 me-3">
+                    <span class="logo">Voyage Vista
+                        <span class="line ms-3"></span>
+                    </span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mynavbar">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link mx-2" href="javascript:void(0)">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-2" href="javascript:void(0)">Link</a>
+                        </li>
+                        <div class="dropdown">
+                            <button type="button" class="btn dropdown-toggle drop mx-lg-2 mx-0"
+                                data-bs-toggle="dropdown" style="font-size: 18px;">
+                                Trips
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Egypt</a></li>
+                                <li><a class="dropdown-item" href="#">United Arab Emirates</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Italy</a></li>
+                                <li><a class="dropdown-item" href="#">United States</a></li>
+                                <li><a class="dropdown-item" href="#">France</a></li>
+                                <li><a class="dropdown-item" href="#">Japan</a></li>
+                                <li><a class="dropdown-item" href="#">More...</a></li>
+                            </ul>
+                        </div>
+                        <li class="nav-item">
+                            <a class="nav-link mx-2" href="javascript:void(0)">About</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="text" placeholder="Search"
+                            style="border:2px solid #FF8252">
+                        <button class="btn mx-3" type="button">Search</button>
+                        <button class="btn me-3" type="button" data-bs-toggle="modal"
+                            data-bs-target="#myModal">Login</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <div class="modal" id="myModal">
+            <div class="modal-dialog ">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Login</h4>
+                        <button style="color: white;" type="button" class="btn-close " data-bs-dismiss="modal"></button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body mx-2">
+                        <form action="">
+                            <label for="email">Email address</label>
+                            <input type="email" id="email" class="form-control mt-1">
+                            <p class="mt-1 ms-1 text-secondary">We'll never share your email with anyone else.</p>
+                            <label for="psw">Password</label>
+                            <input type="password" id="psw" class="form-control mt-1">
+                            <div class="form-check form-switch mt-3 mx-3">
+                                <input class="form-check-input" type="checkbox" id="mySwitch" value="yes" checked>
+                                <label class="form-check-label" for="mySwitch">Remember me</label>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- Modal footer -->
+                    <div class="modal-footer d-flex justify-content-between mx-2">
+                        <button type="button" class="btn" data-bs-dismiss="modal">Login</button>
+                        <button type="button" class="btn" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div id="demo" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block carsoul-img carsoul1"
+                        style="width:100%;object-fit: cover; object-position: center;">
+                    <div class="carousel-caption">
+                        <h3>Giza</h3>
+                        <p>Home to the iconic Pyramids and the Great Sphinx.</p>
+                        <button class="btn mx-3 mb-2 px-3 py-2" type="button">Search</button>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block carsoul-img carsoul2" style="width:100%">
+                    <div class="carousel-caption">
+                        <h3>Roma</h3>
+                        <p>The Eternal City, rich in history, art, and culture.</p>
+                        <button class="btn mx-3 mb-2" type="button">Search</button>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block carsoul-img carsoul3" style="width:100%">
+                    <div class="carousel-caption">
+                        <h3>Türkiye</h3>
+                        <p>A blend of ancient wonders, vibrant bazaars, and stunning landscapes.</p>
+                        <button class="btn mx-3 mb-2" type="button">Search</button>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block carsoul-img carsoul4" style="width:100%">
+                    <div class="carousel-caption">
+                        <h3>Australia</h3>
+                        <p>Land of unique wildlife, breathtaking beaches, and modern cities.</p>
+                        <button class="btn mx-3 mb-2" type="button">Search</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Left and right controls/icons -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+        <div class="icons position-fixed">
+            <i class="fa-brands fa-square-facebook"></i>
+            <i class="fa-brands fa-square-whatsapp"></i>
+            <i class="fa-brands fa-square-twitter"></i>
+            <i class="fa-brands fa-linkedin"></i>
+            <i class="fa-brands fa-square-instagram"></i>
+        </div>
+        <div class="p-main">
+            <div class="containeer">
+                <h5>WELCOME</h5>
+                <P>Are you dreaming of exploring the world? We offer the ultimate travel experiences across continents,
+                    covering iconic destinations from Paris to Tokyo. Whether it’s a short getaway or a month-long
+                    adventure, we handle everything—from flights and accommodations to guided tours. 24/7 Customer.</P>
+                <button type="button" class="btn">Learn More</button>
+            </div>
+        </div>
+    </main>
+    <hr>
+    <section class="section1">
+        <h3 class="text-center p-5 sec1-title mb-3 rounded">Popular Destinations Around The World</h3>
+        <div id="accordion">
+            <div class="card" style="border-radius: 10px 10px 0px;">
+                <div class="card-header d-flex justify-content-between">
+                    <a class="collapsed btn colored" data-bs-toggle="collapse" href="#collapseOne">
+                        Egypt
+                    </a>
+                    <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseOne">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </a>
+                </div>
+                <div id="collapseOne" class="collapse" data-bs-parent="#accordion">
+                    <div class="card-body">
+                        Explore the wonders of Egypt, from the Great Pyramids of Giza to the temples of Luxor. Enjoy the
+                        beaches of the Red Sea or cruise the Nile for a truly magical experience.
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header d-flex justify-content-between">
+                    <a class="collapsed btn colored" data-bs-toggle="collapse" href="#collapseTwo">
+                        France
+                    </a>
+                    <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseTwo">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </a>
+                </div>
+                <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
+                    <div class="card-body">
+                        Paris, the city of love, is famous for the Eiffel Tower, Louvre Museum, and charming streets.
+                        Enjoy fine dining, world-class fashion, and rich art history.
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header d-flex justify-content-between">
+                    <a class="collapsed btn colored" data-bs-toggle="collapse" href="#collapseThree">
+                        Italy
+                    </a>
+                    <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseThree">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </a>
+                </div>
+                <div id="collapseThree" class="collapse" data-bs-parent="#accordion">
+                    <div class="card-body">
+                        Rome, the heart of Italy, is home to the Colosseum, Vatican City, and the Trevi Fountain. Enjoy
+                        authentic Italian cuisine and explore ancient history at every turn.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <section class="section2">
+        <div class="trans pb-4 rounded" id="copyBtn">
+            <h3 class="text-center p-3 rounded">Translate From Arabic To English</h3>
+            <div class="containeer">
+                <p class="sec2-p mt-4">Write and Translate <span>Press Here</span></p>
+                <a href="#copyBtn" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy to Clipboard"> <button
+                        type="button" class="btn btn-modal mb-3" data-bs-toggle="popover" data-bs-trigger="focus"
+                        data-bs-content="Copied!" onclick="copyToClipboard()">
+                        <i class="bi bi-clipboard"></i> Copy
+                    </button> </a>
+                <div class="modal fade" id="modal2">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+
+                            <!-- Modal body -->
+                            <div class="modal-body text-center modal-text">
+                                Text is copied
+                                <br>
+                                <button type="button" class="btn btn-modal p-2 pe-4 ps-4 mt-3 " data-bs-dismiss="modal"
+                                    style="font-size: 19px; border:none">Ok</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <textarea placeholder="Translate" class="form-control" rows="5"></textarea>
+            </div>
+        </div>
+        <hr>
+        <div class="trans pb-4 rounded" id="copyBtn1">
+            <h3 class="text-center p-3 rounded">Translate From Arabic To French</h3>
+            <div class="containeer">
+                <p class="sec2-p mt-4">Write and Translate <span>Press Here</span></p>
+                <a href="#copyBtn1" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy to Clipboard"> <button
+                        type="button" class="btn btn-modal mb-3" data-bs-toggle="popover" data-bs-trigger="focus"
+                        data-bs-content="Copied!" onclick="copyToClipboard()">
+                        <i class="bi bi-clipboard"></i> Copy
+                    </button> </a>
+                <div class="modal fade" id="modal2">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+
+                            <!-- Modal body -->
+                            <div class="modal-body text-center modal-text">
+                                Text is copied
+                                <br>
+                                <button type="button" class="btn btn-modal p-2 pe-4 ps-4 mt-3 " data-bs-dismiss="modal"
+                                    style="font-size: 19px; border:none">Ok</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <textarea placeholder="Translate" class="form-control" rows="5"></textarea>
+            </div>
+        </div>
+        <hr>
+        <div class="trans pb-4 rounded" id="copyBtn2">
+            <h3 class="text-center p-3 rounded">Translate From Arabic To Italian</h3>
+            <div class="containeer">
+                <p class="sec2-p mt-4">Write and Translate <span>Press Here</span></p>
+                <a href="#copyBtn2" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy to Clipboard"><button
+                        type="button" class="btn btn-modal mb-3" data-bs-toggle="popover" data-bs-trigger="focus"
+                        data-bs-content="Copied!" onclick="copyToClipboard()">
+                        <i class="bi bi-clipboard"></i> Copy
+                    </button> </a>
+                <div class="modal fade" id="modal2">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+
+                            <!-- Modal body -->
+                            <div class="modal-body text-center modal-text">
+                                Text is copied
+                                <br>
+                                <button type="button" class="btn btn-modal p-2 pe-4 ps-4 mt-3 " data-bs-dismiss="modal"
+                                    style="font-size: 19px; border:none">Ok</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <textarea placeholder="Translate" class="form-control" rows="5"></textarea>
+            </div>
+        </div>
+        <hr>
+    </section>
+    <section class="section3">
+        <div class="sec3-img"></div>
+        <div class="sec6-title rounded">
+            <h3 class="text-center p-3">Popular Destination Around The world</h3>
+        </div>
+    </section>
+    <section class="section4 mt-5 mb-3 container d-flex justify-content-evenly flex-wrap">
+        <div class="card mb-5 mt-xl-3 shadow-lg">
+            <img class="card-img-top sec4-img m-auto shadow-lg"
+                src="https://i.pinimg.com/236x/75/19/84/751984ac68537f63f144703d15383a23.jpg">
+            <div class="card-body">
+                <div class="d-flex m-auto justify-content-between">
+                    <h4 class="card-title text-uppercase position-relative z-3">France</h4>
+                    <a href="#" class="btn btn-primary position-relative z-3">Know More</a>
+                </div>
+                <p class="card-text position-relative z-3">Eiffel Tower, art, romance.</p>
+            </div>
+        </div>
+        <div class="card mb-5 mt-xl-3 shadow-lg">
+            <img class="card-img-top sec4-img m-auto shadow-lg"
+                src="https://i.pinimg.com/474x/13/a5/1f/13a51f41122eb66ff1612021f399fcd0.jpg">
+            <div class="card-body">
+                <div class="d-flex m-auto justify-content-between">
+                    <h4 class="card-title text-uppercase position-relative z-3">Italy</h4>
+                    <a href="#" class="btn btn-primary position-relative z-3">Know More</a>
+                </div>
+                <p class="card-text position-relative z-3">Colosseum, history, fashion.</p>
+            </div>
+        </div>
+        <div class="card mb-5 mt-xl-3 shadow-lg">
+            <img class="card-img-top sec4-img m-auto shadow-lg"
+                src="https://i.pinimg.com/736x/9c/22/9e/9c229e13ed0f3424d657232c29f1ce0b.jpg">
+            <div class="card-body">
+                <div class="d-flex m-auto justify-content-between">
+                    <h4 class="card-title text-uppercase position-relative z-3">Japan</h4>
+                    <a href="#" class="btn btn-primary position-relative z-3">Know More</a>
+                </div>
+                <p class="card-text position-relative z-3">Mount Fuji, Cherry blossoms.</p>
+            </div>
+        </div>
+        <div class="card mb-5 shadow-lg">
+            <img class="card-img-top sec4-img m-auto shadow-lg"
+                src="https://i.pinimg.com/736x/61/a3/fa/61a3fadca84f88dc7d03e70aba6105ea.jpg">
+            <div class="card-body">
+                <div class="d-flex m-auto justify-content-between">
+                    <h4 class="card-title text-uppercase position-relative z-3">Thailand</h4>
+                    <a href="#" class="btn btn-primary position-relative z-3">Know More</a>
+                </div>
+                <p class="card-text position-relative z-3">Phi Phi Islands, Beaches.</p>
+            </div>
+        </div>
+        <div class="card mb-5 shadow-lg">
+            <img class="card-img-top sec4-img m-auto shadow-lg"
+                src="https://i.pinimg.com/736x/ca/c7/76/cac776173519281363001183467fb097.jpg">
+            <div class="card-body">
+                <div class="d-flex m-auto justify-content-between">
+                    <h4 class="card-title text-uppercase position-relative z-3">Turkey</h4>
+                    <a href="#" class="btn btn-primary position-relative z-3">Know More</a>
+                </div>
+                <p class="card-text position-relative z-3">Hagia Sophia, Mosques, bazaars.</p>
+            </div>
+        </div>
+        <div class="card mb-5 shadow-lg">
+            <img class="card-img-top sec4-img m-auto shadow-lg"
+                src="https://i.pinimg.com/236x/f2/8c/7b/f28c7b3b0e91254f17f527f07ece1a34.jpg">
+            <div class="card-body">
+                <div class="d-flex m-auto justify-content-between">
+                    <h4 class="card-title text-uppercase position-relative z-3">Egypt</h4>
+                    <a href="#" class="btn btn-primary position-relative z-3">Know More</a>
+                </div>
+                <p class="card-text position-relative z-3">Pyramids of Giza, history.</p>
+            </div>
+        </div>
+        <div class="card mb-5 shadow-lg">
+            <img class="card-img-top sec4-img m-auto shadow-lg"
+                src="https://i.pinimg.com/474x/73/26/d4/7326d4928e2aa47140e6bcaa6b35a3ad.jpg">
+            <div class="card-body">
+                <div class="d-flex m-auto justify-content-between">
+                    <h4 class="card-title text-uppercase position-relative z-3">Greece</h4>
+                    <a href="#" class="btn btn-primary position-relative z-3">Know More</a>
+                </div>
+                <p class="card-text position-relative z-3">Santorini, islands, Mediterranean, blue-domes.</p>
+            </div>
+        </div>
+        <div class="card shadow-lg">
+            <img class="card-img-top sec4-img m-auto shadow-lg"
+                src="https://i.pinimg.com/736x/e0/0f/bd/e00fbd4af6d42b57abb56e78b8d4ae6b.jpg">
+            <div class="card-body">
+                <div class="d-flex m-auto justify-content-between">
+                    <h4 class="card-title text-uppercase position-relative z-3">Brazil</h4>
+                    <a href="#" class="btn btn-primary position-relative z-3">Know More</a>
+                </div>
+                <p class="card-text position-relative z-3"> Amazon Rainforest, Trees.</p>
+            </div>
+        </div>
+    </section>
+    <section class="section5">
+        <div class="sec5-img"></div>
+    </section>
+    <hr>
+    <section class="section6">
+        <div class="sec6-title rounded">
+            <h3 class="text-center p-4 text-uppercase">thanks for</h3>
+        </div>
+        <div class="sec6-cards d-flex flex-wrap container justify-content-evenly mt-5 mb-5 m-auto">
+            <div class="card card1 position-relative rounded-4 mb-5">
+                <div class="layer rounded-4">
+                    <div class="ms-4 mt-4">
+                        <h4>All thanks and appreciation</h4>
+                        <i class="fa-solid fa-clock"></i>
+                        <span>February 23, 2025</span>
+                        <div class="position-absolute bottom-0">
+                            <img src="https://i.pinimg.com/736x/1f/4d/4f/1f4d4f0272323d70650a82b91a039854.jpg"
+                                class=" sec6-img rounded-circle border border-light">
+                            <h5 class="mt-1">Mr. James Anderson</h5>
+                            <p>Director of Tourism Management</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card card2 position-relative rounded-4 mb-5">
+                <div class="layer rounded-4">
+                    <div class="ms-4 mt-4">
+                        <h4>All thanks and appreciation</h4>
+                        <i class="fa-solid fa-clock"></i>
+                        <span>February 23, 2025</span>
+                        <div class="position-absolute bottom-0">
+                            <img src="https://i.pinimg.com/736x/8b/76/7c/8b767c6b884449ca95a62409f72e9431.jpg"
+                                class=" sec6-img rounded-circle border border-light">
+                            <h5 class="mt-1">Mr. Michael Roberts</h5>
+                            <p>Director of Travel & Tours</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card card3 position-relative rounded-4">
+                <div class="layer rounded-4">
+                    <div class="ms-4 mt-4">
+                        <h4>All thanks and appreciation</h4>
+                        <i class="fa-solid fa-clock"></i>
+                        <span>February 23, 2025</span>
+                        <div class="position-absolute bottom-0">
+                            <img src="https://i.pinimg.com/736x/a0/04/df/a004dfe8687ed3fef80c75cb0185cd3b.jpg"
+                                class=" sec6-img rounded-circle border border-light">
+                            <h5 class="mt-1">Ms. Emily Carter</h5>
+                            <p>Director of Hospitality & Guest Services</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <section class="section7">
+        <h3 class="text-center pt-4 text-uppercase">World News</h3>
+        <div class="container">
+            <div class="cards d-flex mb-5 rounded-4">
+                <div
+                    class="sec7-right ms-sm-5 ms-4 position-relative mt-sm-5 mt-4 justify-content-between me-sm-4 me-4">
+                    <h4 class="mb-3">Pyramids of Giza, Egypt</h4>
+                    <i class="fa-solid fa-calendar-days me-1"></i><span>Mon, Feb 24th 2025</span>
+                    <div class="progress mt-2 mb-3">
+                        <div class="progress-bar rounded-2"></div>
+                    </div>
+                    <p>The Pyramids of Giza are one of the Seven Wonders of the Ancient World, built as tombs for
+                        Egyptian
+                        pharaohs. The Great Pyramid, the largest, was the tallest structure in the world for over 3,800
+                        years. These ancient marvels continue to attract archaeologists and tourists alike. Visitors can
+                        explore the Sphinx and the pyramids' interiors.</p>
+                    <div class="buttons position-absolute ">
+                        <button type="button" class="btn btn-light m-md-0 me-sm-2 mb-sm-3"><i
+                                class="fa-solid fa-tag me-1"></i>Egypt</button>
+                        <button type="button" class="btn btn-light mb-3 m-md-0"><i class="fa-solid fa-clock me-1"></i>2
+                            hours
+                        </button>
+                        <button type="button" class="btn btn-light play1 "><i class="fa-solid fa-play  me-1"></i>Play
+                            Episode</button>
+                    </div>
+                </div>
+                <div class="image-wrapper rounded-end-4">
+                    <img src="https://i.pinimg.com/736x/60/b1/6b/60b16b763392334059c9d9612e894331.jpg"
+                        class="sec7-img rounded-end-4 overflow-hidden">
+                </div>
+            </div>
+            <div class="cards d-flex mb-5 rounded-4">
+                <div class="image-wrapper image-wrapper2 rounded-start-4">
+                    <img src="https://i.pinimg.com/736x/ac/94/35/ac9435b1dae07a86462fa6fa691498c4.jpg"
+                        class="sec7-img rounded-start-4">
+                </div>
+                <div
+                    class="sec7-right ms-sm-5 ms-4 position-relative mt-sm-5 mt-4 justify-content-between me-sm-4 me-4">
+                    <h4 class="mb-3">Taj Mahal, India</h4>
+                    <i class="fa-solid fa-calendar-days me-1"></i><span>Mon, Feb 24th 2025</span>
+                    <div class="progress mt-2 mb-3">
+                        <div class="progress-bar rounded-2" style="background-color: rgb(136, 32, 32);"></div>
+                    </div>
+                    <p>The Taj Mahal is a white marble mausoleum in Agra, India, built by Emperor Shah Jahan in memory
+                        of his wife, Mumtaz Mahal. It is known for its intricate carvings, calligraphy, and symmetrical
+                        gardens. The monument changes colors throughout the day, making it a magical sight at sunrise
+                        and sunset.</p>
+                    <div class="buttons position-absolute ">
+                        <button type="button" class="btn btn-light m-md-0 me-sm-2 mb-sm-3"><i
+                                class="fa-solid fa-tag me-1"></i>India</button>
+                        <button type="button" class="btn btn-light mb-3 m-md-0"><i
+                                class="fa-solid fa-clock me-1"></i>1.5
+                            hours
+                        </button>
+                        <button type="button" class="btn btn-light play2"><i class="fa-solid fa-play me-1"></i>Play
+                            Episode</button>
+                    </div>
+                </div>
+            </div>
+            <div class="cards d-flex mb-5 rounded-4">
+                <div
+                    class="sec7-right ms-sm-5 ms-4 position-relative mt-sm-5 mt-4 justify-content-between me-sm-4 me-4">
+                    <h4 class="mb-3">Great Wall of China</h4>
+                    <i class="fa-solid fa-calendar-days me-1"></i><span>Mon, Feb 24th 2025</span>
+                    <div class="progress mt-2 mb-3">
+                        <div class="progress-bar rounded-2" style="background-color: rgb(32, 136, 72);"></div>
+                    </div>
+                    <p>The Great Wall of China stretches over 13,000 miles, built to protect Chinese empires from
+                        invasions. It winds through mountains and deserts, showcasing ancient Chinese engineering
+                        skills. Tourists visit for its breathtaking views and historic significance.</p>
+                    <div class="buttons position-absolute ">
+                        <button type="button" class="btn btn-light m-md-0 me-sm-2 mb-sm-3"><i
+                                class="fa-solid fa-tag me-1"></i>China</button>
+                        <button type="button" class="btn btn-light mb-3 m-md-0"><i class="fa-solid fa-clock me-1"></i>1
+                            hour
+                        </button>
+                        <button type="button" class="btn btn-light play3"><i class="fa-solid fa-play me-1"></i>Play
+                            Episode</button>
+                    </div>
+                </div>
+                <div class="image-wrapper rounded-end-4">
+                    <img src="https://i.pinimg.com/736x/cf/12/3b/cf123bcf25f0484e309ff9892acbac9a.jpg"
+                        class="sec7-img rounded-end">
+                </div>
+            </div>
+            <div class="cards d-flex mb-5 rounded-4">
+                <div class="image-wrapper image-wrapper2 rounded-start-4">
+                    <img src="https://i.pinimg.com/736x/bd/d3/73/bdd373b6fcb01d007c872ecfa6d96f98.jpg"
+                        class="sec7-img rounded-start">
+                </div>
+                <div
+                    class="sec7-right ms-sm-5 ms-4 position-relative mt-sm-5 mt-4 justify-content-between me-sm-4 me-4">
+                    <h4 class="mb-3">Chichen Itza, Mexico</h4>
+                    <i class="fa-solid fa-calendar-days me-1"></i><span>Mon, Feb 24th 2025</span>
+                    <div class="progress mt-2 mb-3">
+                        <div class="progress-bar rounded-2" style="background-color: rgb(136, 32, 96);"></div>
+                    </div>
+                    <p>The Chichen Itza ruins are one of the most important Mayan archaeological sites in Mexico. The El
+                        Castillo pyramid, also known as the Temple of Kukulcán, aligns with astronomical events.
+                        Visitors can learn about ancient Mayan culture, see the sacred cenote, and experience the
+                        fascinating acoustics of the temple.</p>
+                    <div class="buttons position-absolute ">
+                        <button type="button" class="btn btn-light m-md-0 me-sm-2 mb-sm-3"><i
+                                class="fa-solid fa-tag me-1"></i>Mexic</button>
+                        <button type="button" class="btn btn-light mb-3 m-md-0"><i class="fa-solid fa-clock me-1"></i>2
+                            hours
+                        </button>
+                        <button type="button" class="btn btn-light play4"><i class="fa-solid fa-play me-1"></i>Play
+                            Episode</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section8 mb-4">
+        <h3 class="text-uppercase text-center mb-4">Join us</h3>
+        <div class="container">
+            <div class="d-flex justify-content-evenly flex-wrap m-auto">
+                <div class="sec8-icons rounded-4 shadow-lg text-center pt-4 bg-light mb-5">
+                    <p class="mb-3">Subscribe Now</p>
+                    <div class="p-icons m-auto mb-3 rounded-3  " style="background-color: #1D98E5;">
+                        <a href=""><i class="fa-brands fa-twitter" style="color: white"></i></a>
+                    </div>
+                    <p class="link">Go to link</p>
+                </div>
+                <div class="sec8-icons rounded-4 shadow-lg text-center pt-4 bg-light mb-5">
+                    <p class="mb-3">Follow</p>
+                    <div class="p-icons m-auto mb-3 rounded-3 " style="background-color: #1FB44D;">
+                        <a href=""><i class="fa-brands fa-whatsapp" style="color: white;"></i></a>
+                    </div>
+                    <p class="link">Go to link</p>
+                </div>
+                <div class="sec8-icons rounded-4 shadow-lg text-center pt-4 bg-light mb-5">
+                    <p class="mb-3">Like the page</p>
+                    <div class="p-icons m-auto mb-3 rounded-3 " style="background-color: #0A66C2">
+                        <a href=""><i class="fa-brands fa-linkedin-in" style="color: white;"></i></a>
+                    </div>
+                    <p class="link">Go to link</p>
+                </div>
+                <div class="sec8-icons rounded-4 shadow-lg text-center pt-4 bg-light mb-5">
+                    <p class="mb-3">Watch vedios</p>
+                    <div class="p-icons m-auto mb-3 rounded-3 "
+                        style="background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);">
+                        <a href=""><i class="fa-brands fa-instagram" style="color: white;"></i></a>
+                    </div>
+                    <p class="link">Go to link</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="pb-5 pt-3">
+        <div class="d-flex justify-content-evenly flex-wrap">
+            <div class="footer text-center col-lg-4 col-12 pe-lg-4 p-2">
+                <div class="line" ></div>
+                <img src="https://i.pinimg.com/736x/ab/82/cf/ab82cfc63bd77cb794b09acac96af0e1.jpg"
+                    class="logo-img rounded-circle ms-sm-5 me-3 m-4">
+                <span>Important Links</span>
+                <div class="line"></div>
+                <p class="mt-3">Tel: +123-456-789</p>
+                <p>Fax: +123-456-789</p>
+                <p>Address: Worldwide Services</p>
+            </div>
+            <div class="footer text-center col-lg-4 col-12 pe-lg-4 p-2">
+                <div class="line"></div>
+                <img src="https://i.pinimg.com/736x/ab/82/cf/ab82cfc63bd77cb794b09acac96af0e1.jpg"
+                    class="logo-img rounded-circle ms-sm-5 me-3 m-4">
+                <span>Global Tours</span>
+                <div class="line"></div>
+                <a href="" class="footer-links">
+                    <p class="mt-3">Book Your Trip</p>
+                </a>
+                <a href="" class="footer-links">
+                    <p>Travel Assistance</p>
+                </a>
+                <a href="" class="footer-links">
+                    <p>Explore Destinations</p>
+                </a>
+            </div>
+            <div class="footer text-center col-lg-4 col-12 pelg-0 p-2">
+                <div class="line"></div>
+                <img src="https://i.pinimg.com/736x/ab/82/cf/ab82cfc63bd77cb794b09acac96af0e1.jpg"
+                    class="logo-img rounded-circle ms-sm-5 me-3 m-4">
+                <span>Our Vision</span>
+                <div class="line"></div>
+                <p class="mt-3">Travel Beyond Limits</p>
+                <p>Your Journey, Our Priority</p>
+                <p>Creating Unforgettable Experiences</p>
+            </div>
+        </div>
+        <div class="line"></div>
+        <p class="text-center footer-colored m-3">COPYRIGHT &copy; 2025 GLOBAL TOURS, ALL RIGHTS RESERVED.</p>
+        <div class="line"></div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="JS/script.js"></script>
+</body>
+
+</html>
